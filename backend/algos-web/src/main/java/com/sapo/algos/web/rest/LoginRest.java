@@ -40,12 +40,14 @@ public class LoginRest {
 			JsonObject jsonAuth = Json.createObjectBuilder()
 					.add( AuthHeaders.SERVICE_KEY, user.getServiceKey() )
 					.add( AuthHeaders.AUTH_TOKEN, user.getAuthToken() )
+					.add("loginUserSuccess", true )
 					.build();
 			return getNoCacheResponseBuilder( Response.Status.OK ).entity( jsonAuth.toString() ).build();
 
 		} catch( LoginException e ) {
 			JsonObject jsonObj = Json.createObjectBuilder()
 								.add( "message", "User input doesn't match" )
+								.add("loginUserSuccess", false )
 								.build();
 
 			return getNoCacheResponseBuilder( Response.Status.UNAUTHORIZED ).entity( jsonObj.toString() ).build();
