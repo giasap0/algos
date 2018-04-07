@@ -1,3 +1,4 @@
 /backend/.idea/**
+/backend/log.lnk
 **/*.iml
 **/target/*
