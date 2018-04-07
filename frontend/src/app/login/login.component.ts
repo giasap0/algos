@@ -1,28 +1,39 @@
-import { Component, OnInit,ElementRef,ViewChild } from '@angular/core';
-import { Router,  NavigationExtras,ActivatedRoute } from '@angular/router';
+import { Component, OnInit,ElementRef } from '@angular/core';
+//import { Router,  NavigationExtras, ActivatedRoute } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-//import { UserService } from '../service/user.service'
+//import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {User} from '../dataModels/User';
+//import { UserService } from '../service/user.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
-  //providers: [UserService]
+//  providers: [UserService]
 })
 export class LoginComponent implements OnInit {
 
+	user : User = {
+		code: 'abcdz',
+		loginDate: new Date(),
+		username: '',
+		password: ''
+	};
+
 /*  constructor( private route: ActivatedRoute,
 	private fb: FormBuilder,
-	private authenticationservice:UserService,
+	private authenticationService: UserService,
 	public router: Router ) {
 		//bind data to the form elements
 	}
-
-  ngOnInit() {
-	  this.authenticationservice.logout();
-  }
+	ngOnInit() {
+		this.authenticationservice.logout();
+	}
 */
-	constructor() {}
-	ngOnInit() {}
+	constructor( private fmodule: FormsModule
+				) {
+	}
+
+	ngOnInit() {
+	}
 }

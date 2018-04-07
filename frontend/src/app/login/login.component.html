@@ -6,12 +6,12 @@
 
         <div class="login-form">
             <div class="control-group">
-                <input type="text" class="login-field" value="" placeholder="username" id="login_usr">
+                <input type="text"  [(ngModel)]="user.username" placeholder="username" id="login_usr" class="login-field">
                 <label class="login-field-icon" for="login_usr"></label>
             </div>
 
             <div class="control-group">
-                <input type="password" class="login-field" value="" placeholder="password" id="login_psw">
+                <input type="password" [(ngModel)]="user.password" placeholder="password" id="login_psw" class="login-field">
                 <label class="login-field-icon" for="login_psw"></label>
             </div>
 
