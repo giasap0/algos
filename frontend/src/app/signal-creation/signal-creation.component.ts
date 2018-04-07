@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Lotto } from '../dataModels/Lotto';
 import { Segnalazione } from '../dataModels/Segnalazione';
+import { TipiProdottoService } from '../service/tipi-prodotto.service';
+import { CodiceDescrizione } from '../dataModels/CodiceDescrizione';
 
 @Component({
   selector: 'app-signal-creation',
@@ -17,11 +19,22 @@ export class SignalCreationComponent implements OnInit {
 
 	public segnalazione : Segnalazione = null;
 
-	constructor( private fmodule: FormsModule ) {
+	public allProducts: CodiceDescrizione[] = [];
+
+	constructor( private fmodule: FormsModule
+				, private productsService: TipiProdottoService
+				) {
 		this.segnalazione = new Segnalazione();
 	}
 
 	ngOnInit() {
+		this.initializeProducts();
+	}
+
+	private initializeProducts() {
+		this.productsService.getAllTipiProdotto()
+		.subscribe( prods => this.allProducts = prods);
+		;
 	}
 
 	//event handlers

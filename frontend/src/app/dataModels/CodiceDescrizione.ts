@@ -2,7 +2,7 @@
 
 export class CodiceDescrizione {
 	public code: String;
-	public description: Date;
+	public description: String;
 
 	constructor() {
 		this.code = '';

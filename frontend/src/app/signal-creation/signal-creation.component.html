@@ -8,7 +8,11 @@
     Denominazione di Vendita: <input type="text" [(ngModel)]="segnalazione.denominazioneVendita" placeholder="prodotto x" /><br>
     Codice Prodotto: <input type="text" [(ngModel)]="segnalazione.codiceProdotto" placeholder="123456" />
     Codice EAN: <input type="text" [(ngModel)]="segnalazione.codiceEAN" placeholder="123456" /><br>
-    Tipo Prodotto: <p id="warnTipoProdContainer" class="selectContainer"></p> <!-- [(ngModel)]="segnalazione.tipoProdotto" -->
+    Tipo Prodotto: <p id="warnTipoProdContainer" class="selectContainer">
+		<select [(ngModel)]="segnalazione.tipoProdotto">
+			<option *ngFor="let prod of allProducts" [value]="prod.code">{{prod.description}}</option>
+		</select>
+	</p>
     Modalità di Conservazione: <input type="text" [(ngModel)]="segnalazione.modalitaConservazione" placeholder="4°C" /><br>
 </div>
 
