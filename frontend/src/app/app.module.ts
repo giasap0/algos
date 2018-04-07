@@ -7,6 +7,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { SignalCreationComponent } from './signal-creation/signal-creation.component';
 import { TipiProdottoService } from './service/tipi-prodotto.service';
+import { AppRoutingModule } from './/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { TipiProdottoService } from './service/tipi-prodotto.service';
   ],
   imports: [
 	BrowserModule,
-	FormsModule
+	FormsModule,
+	AppRoutingModule
   ],
   providers: [ TipiProdottoService ],
   bootstrap: [AppComponent]
