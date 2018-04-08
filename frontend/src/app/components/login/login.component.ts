@@ -1,8 +1,6 @@
 import { Component, OnInit,ElementRef } from '@angular/core';
-//import { Router,  NavigationExtras, ActivatedRoute } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-//import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import {User} from '../dataModels/User';
+import {User} from './../../dataModels/User';
 //import { UserService } from '../service/user.service';
 
 @Component({

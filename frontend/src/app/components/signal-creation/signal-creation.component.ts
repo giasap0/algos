@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Lotto } from '../dataModels/Lotto';
-import { Segnalazione } from '../dataModels/Segnalazione';
-import { TipiProdottoService } from '../service/tipi-prodotto.service';
-import { CodiceDescrizione } from '../dataModels/CodiceDescrizione';
+import { Lotto } from './../../dataModels/Lotto';
+import { Segnalazione } from './../../dataModels/Segnalazione';
+import { TipiProdottoService } from './../../service/tipi-prodotto.service';
+import { CodiceDescrizione } from './../../dataModels/CodiceDescrizione';
 
 @Component({
   selector: 'app-signal-creation',
