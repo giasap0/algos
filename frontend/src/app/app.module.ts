@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { SignalCreationComponent } from './signal-creation/signal-creation.component';
 import { TipiProdottoService } from './service/tipi-prodotto.service';
 import { AppRoutingModule } from './/app-routing.module';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { AppRoutingModule } from './/app-routing.module';
   imports: [
 	BrowserModule,
 	FormsModule,
+	BsDropdownModule.forRoot(),
 	AppRoutingModule
   ],
   providers: [ TipiProdottoService ],
