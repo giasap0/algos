@@ -6,8 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-
-	public isCollapsed = true;
 	constructor() { }
 
+	//event handlers
+	toggleSideBar() {
+		//TODO chiamare il metodo toggleSidebar() di class SidebarComponent
+	}
 }

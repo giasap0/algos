@@ -17,6 +17,7 @@ import { SignalCreationComponent } from './components/signal-creation/signal-cre
 /** services */
 import { TipiProdottoService } from './service/tipi-prodotto.service';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 
 @NgModule({
@@ -24,12 +25,14 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     AppComponent,
     LoginComponent,
 	SignalCreationComponent,
-	NavbarComponent
+	NavbarComponent,
+	SidebarComponent
   ],
   imports: [
 	BrowserModule,
 	FormsModule,
 	BsDropdownModule.forRoot(),
+	CollapseModule.forRoot(),
 	AppRoutingModule
   ],
   providers: [ TipiProdottoService ],
