@@ -18,6 +18,7 @@ import { SignalCreationComponent } from './components/signal-creation/signal-cre
 import { TipiProdottoService } from './service/tipi-prodotto.service';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     LoginComponent,
 	SignalCreationComponent,
 	NavbarComponent,
-	SidebarComponent
+	SidebarComponent,
+	FooterComponent
   ],
   imports: [
 	BrowserModule,

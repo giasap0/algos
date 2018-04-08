@@ -11,7 +11,7 @@ export class SidebarComponent implements OnInit {
 	constructor() { }
 
 	ngOnInit() {
-		this.isHidden = true;
+		this.closeSidebar();
 	}
 
 	public closeSidebar() {

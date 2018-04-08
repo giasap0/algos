@@ -6,6 +6,7 @@ import { LoginComponent } from './components/login/login.component';
 const routes: Routes = [
 	{ path: 'creaSegnalazione', component: SignalCreationComponent }
 	,{ path: 'login', component: LoginComponent }
+	,{ path: '', redirectTo: '/login', pathMatch: 'full' }
   ];
 
 @NgModule({
