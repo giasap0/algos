@@ -22,3 +22,7 @@ INSERT INTO ttipiprodotto (`ID_TIPO_PROD`, `CODICE`, `DESCRIZIONE`) VALUES
     (NULL, 'ORTPRD', 'Ortofrutta'),
     (NULL, 'SRGPRD', 'Surgelati')
 ;
+
+insert into TSYSTEMPROP (ID_SYSPROP, PARAM, VAL) VALUES (
+    NULL, 'environment', 'dev'
+)
