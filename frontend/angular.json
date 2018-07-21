@@ -123,8 +123,5 @@
       }
     }
   },
-  "defaultProject": "algos",
-  "cli": {
-    "packageManager": "yarn"
-  }
+  "defaultProject": "algos"
 }
